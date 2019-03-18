@@ -7,7 +7,6 @@ import java.util.Map;
 public class PracticeC {
     Map<String,Integer> createUpdatedCollection(List<String> collectionA, Map<String,List<String>> object) {
         Map<String, Integer> collection3 = new PracticeA().countSameElements(collectionA);
-
         return new PracticeB().createUpdatedCollection(collection3,object);
     }
 }
