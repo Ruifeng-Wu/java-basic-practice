@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 public class PracticeB {
-    Map<String, Integer> countSameElements(List<String> collection1) {
+    public Map<String, Integer> countSameElements(List<String> collection1) {
         Map<String, Integer> sameElementsNum = new PracticeA().countSameElements(collection1);
         for (String str:sameElementsNum.keySet()) {
             if (str.length()>1){
