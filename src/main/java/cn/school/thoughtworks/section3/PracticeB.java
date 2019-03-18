@@ -1,12 +1,20 @@
 package cn.school.thoughtworks.section3;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class PracticeB {
     Map<String,Integer> createUpdatedCollection(Map<String,Integer> collectionA, Map<String,List<String>> object) {
-        //实现练习要求，并改写该行代码。
-
-        return null;
+        Set<String> elements=new HashSet<>(collectionA.keySet());
+        List<String> reducedElements=object.get("value");
+        elements.retainAll(reducedElements);
+        for (String str:elements) {
+            if (collectionA.get(str)>=3) {
+                collectionA.put(str, collectionA.get(str)-collectionA.get(str)/3);
+            }
+        }
+        return collectionA;
     }
 }
