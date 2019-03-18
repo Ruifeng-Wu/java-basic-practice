@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class PracticeA {
-    Map<String, Integer> countSameElements(List<String> collection1) {
+    public Map<String, Integer> countSameElements(List<String> collection1) {
         Map<String, Integer> sameElementsNum = collection1.stream()
                 .collect(Collectors.toMap(str -> str, str -> Collections.frequency(collection1, str), (a, b) -> b));
         return sameElementsNum;
